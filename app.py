@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the dataset
-df = pd.read_csv("student_data.csv")  # Ensure the dataset is saved as CSV
+df = pd.read_csv("student_data.csv")  # use the data_creation to output it - must be this name 
 
 st.title("📊 Student Performance Dashboard")
-st.write("This dashboard provides insights into student quiz performance across different subjects, majors, and grades.")
+st.write("Here is a really cool description that has really cool details about these quizzes and universities and everything :)")
 
 # Sidebar filters
 st.sidebar.header("Filters")
@@ -37,7 +37,7 @@ st.write(f"### Summary Statistics")
 st.write(f"- **Overall Correctness Rate:** {correctness_rate:.2f}%")
 st.write(f"- **Total Students Analyzed:** {num_students}")
 
-# Layout for visualizations
+# Layout for vis
 col1, col2 = st.columns(2)
 
 # Correctness by Subject
@@ -58,7 +58,7 @@ with col2:
     ax.set_ylabel("Correctness (%)")
     st.pyplot(fig)
 
-# Performance Over Time & Performance by University side by side
+# second section -  I could think about combining these if I wanted
 col3, col4 = st.columns(2)
 
 # Performance Over Time
@@ -90,4 +90,4 @@ st.dataframe(filtered_df)
 
 # Download filtered data
 st.write("### Download Filtered Data")
-st.download_button("Download CSV", filtered_df.to_csv(index=False), "filtered_data.csv", "text/csv")
+st.download_button("Download CSV", filtered_df.to_csv(index=False), "filtered_data.csv", "text/csv") # I could be more specific if I want in naming that 

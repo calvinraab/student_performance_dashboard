@@ -1,2 +1,3 @@
 # student_performance_dashboard
-A really cool dashboard. 
+
+A really cool dashboard!
